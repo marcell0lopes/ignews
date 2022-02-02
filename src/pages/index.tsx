@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import { SubscribeButton } from '../components/SubscribeButton';
 import styles from './home.module.scss';
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
               for $9.90<small>/month</small>
             </span>
           </p>
+          <SubscribeButton />
         </section>
 
         <Image
