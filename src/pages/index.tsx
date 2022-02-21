@@ -5,7 +5,6 @@ import { SubscribeButton } from '../components/SubscribeButton';
 import { stripe } from '../services/stripe';
 import styles from './home.module.scss';
 
-
 interface HomeProps {
   product: {
     priceId: string;
