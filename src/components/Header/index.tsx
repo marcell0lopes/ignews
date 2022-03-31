@@ -1,6 +1,8 @@
-import Image from 'next/image';
-import { SingInButton } from '../SingInButton';
-import styles from './styles.module.scss';
+import Image from "next/image";
+import { SingInButton } from "../SingInButton";
+import styles from "./styles.module.scss";
+import Link from "next/link";
+import { ActiveLink } from "../ActiveLink";
 
 export function Header() {
   return (
@@ -13,8 +15,12 @@ export function Header() {
           height="35px"
         />
         <nav>
-          <a className={styles.active}>Home</a>
-          <a>Posts</a>
+          <ActiveLink href="/" activeClassName={styles.active}>
+            <a>Home </a>
+          </ActiveLink>
+          <ActiveLink href="/posts" activeClassName={styles.active} prefetch>
+            <a>Posts</a>
+          </ActiveLink>
         </nav>
 
         <SingInButton />
